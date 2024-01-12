@@ -1,20 +1,49 @@
 Feature: validate post request
 
-Scenario: 1.Validate you are able to create data in system
-  Given post the data to create user 
-	Then validate status code is "201"
-	Then validate id created for user with non null value 
-	Then validate id created for user with non zero value
+Scenario: 1.Validate you are able to create data in system1
+  Given post the data to create user1
+	Then validate status code1 is "201"
+	Then validate id created for user with non null value1 
+	Then validate id created for user with non zero value1
 	
 	
-Scenario: 2.Validate you are able to create data from File
-  Given post the data to create from file 
-	Then validate status code is "201"
-	Then validate id created for user with non null value 
-	Then validate id created for user with non zero value
+Scenario: 2.Validate you are able to create data from File1
+  Given post the data to create from file1 
+	Then validate status code1 is "201"
+	Then validate id created for user with non null value1 
+	Then validate id created for user with non zero value1
 	
-Scenario: 3.Validate you are able to create user from update File with name field
-  Given post the data to create user from file with updated name
-	Then validate status code is "201"
-	Then validate id created for user with non null value 
-	Then validate id created for user with non zero value
+Scenario: 3.Validate you are able to create user from update File with name field1
+  Given post the data to create user from file with updated name1
+	Then validate status code1 is "201"
+	Then validate id created for user with non null value1 
+	Then validate id created for user with non zero value1
+	
+Scenario: 4.Validate you are able to create user from update File with name field1
+  Given post the data to create user from file with updated fields1
+  |name|
+	Then validate status code1 is "201"
+	Then validate id created for user with non null value1 
+	Then validate id created for user with non zero value1
+	
+Scenario: 5.Validate you are able to create user from update File with name field1
+ Given post the data to create user from file with updated fields1
+  |name|
+  |job|
+  |mob|
+	Then validate status code1 is "201"
+	Then validate id created for user with non null value1 
+	Then validate id created for user with non zero value1
+	
+Scenario: 6.Validate you are able to create user from update File with name field1
+ Given post the data to create user from file with updated fields1
+  |date|
+	Then validate date1 is "2024-01-12"
+	Then validate id created for user with non null value1 
+	Then validate id created for user with non zero value1
+	
+	Scenario: 7.Validate you are able to create user with name as number
+  Given post the data to create usernumber
+	Then validate status code1 is "201"
+	Then validate id created for user with non null value1 
+	Then validate id created for user with non zero value1

@@ -17,7 +17,7 @@ public class HRMS_StepDefinition {
 	}
 
 	@Then("validate user gettting searched")
-	public void validate_user_gettting_searched() {
+	public void validate_user_getting_searched() {
 	   System.out.println("validate user gettting searched");
 	   
 	}
