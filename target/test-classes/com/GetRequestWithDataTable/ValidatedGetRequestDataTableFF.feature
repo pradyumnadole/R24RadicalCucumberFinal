@@ -1,4 +1,4 @@
-Feature: Validate Get Request
+Feature: Validate Get RequestDataTable
 
 Scenario: 1.Validate Demo QA up and running
 	Given hit the URI1

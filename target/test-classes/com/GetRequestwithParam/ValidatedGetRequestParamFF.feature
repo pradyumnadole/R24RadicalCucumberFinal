@@ -1,8 +1,8 @@
-Feature: Validate Get Request
+Feature: Validate Get RequestParam
 
-#Scenario: 1.Validate Demo QA up and running
-#	Given hit the URI1
-#	Then validate title "Git Pocket Guide" and pages "234" of application1111
+Scenario: 1.Validate Demo QA up and running
+	Given hit the URI1
+	Then validate title "Git Pocket Guide" and pages "234" of application1111
 	
 Scenario Outline: 4.Validate data with datadrive testing
     Given hit the URI

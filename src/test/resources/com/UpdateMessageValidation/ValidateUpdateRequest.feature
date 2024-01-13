@@ -1,4 +1,4 @@
-Feature: validate post request
+Feature: validate Update request
 
 Scenario: 1.Validate you are able to create data in system
   Given update the data to create user3
