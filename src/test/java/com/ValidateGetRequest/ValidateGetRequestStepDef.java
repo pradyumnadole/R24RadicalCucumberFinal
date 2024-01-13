@@ -11,6 +11,9 @@ import io.restassured.response.Response;
 
 public class ValidateGetRequestStepDef {
 	Response response;
+	String bookname = "Speaking JavaScript";
+	String author = null;
+
 	
 	@Given("hit the URI111")
 	public void hit_the_URI111() {
@@ -50,6 +53,47 @@ public class ValidateGetRequestStepDef {
 		
 	}
 	
+	@Given("Title of book is {string}")
+	public void Title_of_book_is_(String bookname){
+		response = RestAssured.get("https://demoqa.com/BookStore/v1/Books");
+		 System.out.println("get the response");
+		// bookname = "Speaking JavaScript";
+	}
+	
+	@Then("validate author is {string}")
+	public void validate_author_is_(String author){
+		String dataString = response.getBody().asString();
+		System.out.println("All Data ==== "+dataString);	
+		
+		List<String>alltitle=  response.getBody().jsonPath().getList("books.title");
+		System.out.println("==="+alltitle.toString());
+		int size = alltitle.size();
+		
+		for(int i =0 ;i<size;i++) {
+			String actTitleString = response.getBody().jsonPath().param("i",i).getString("books[i].title");
+			System.out.println("Title of book is " +actTitleString);
+			if (actTitleString.equals(bookname)) {
+				String author1 = response.getBody().jsonPath().param("i",i).getString("books[i].author");
+				System.out.println("author is " +author1);
+					if(author1.equals(author)) {
+					System.out.println("**--***");
+					Assert.assertEquals(author1, author);
+					}
+				break;
+			}
+			else {
+				continue;
+			}
+	
+		}
+		
+		
+		
+		
+		
+		
+	
+	}
 	
 	
 }
