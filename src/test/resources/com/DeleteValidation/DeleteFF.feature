@@ -1,4 +1,4 @@
-Feature: validate post request
+Feature: validate post and delete request
 
 Scenario: 1.Validate you are able to create data in system1
   Given post the data to create user1
